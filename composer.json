@@ -1,0 +1,15 @@
+{
+  "name": "code-atlantic/plugin",
+  "description": "Base plugin container",
+  "type": "library",
+  "license": "GPLv2",
+  "minimum-stability": "dev",
+  "require": {
+    "pimple/pimple": "~3.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "CodeAtlantic\\Plugin\\": "src/"
+    }
+  }
+}
