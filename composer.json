@@ -2,7 +2,7 @@
   "name": "code-atlantic/plugin",
   "description": "Base plugin container",
   "type": "library",
-  "license": "GPLv2",
+  "license": "GPL-2.0-or-later",
   "minimum-stability": "dev",
   "require": {
     "php": "^5.6",
