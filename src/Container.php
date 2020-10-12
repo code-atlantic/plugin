@@ -1,7 +1,11 @@
 <?php
-/*******************************************************************************
- * Copyright (c) 2020, Code Atlantic LLC.
- ******************************************************************************/
+/**
+ * Simple plugin container.
+ *
+ * @package     CodeAtlantic\Plugin
+ * @author      Code Atlantic
+ * @copyright   Copyright (c) 2020, Code Atlantic LLC
+ */
 
 namespace CodeAtlantic\Plugin;
 
@@ -15,9 +19,9 @@ class Container extends \Pimple\Container {
 	/**
 	 * Get item from container
 	 *
-	 * @param string $id
+	 * @param string $id Key for the item.
 	 *
-	 * @return mixed
+	 * @return mixed Current value of the item.
 	 */
 	public function get( $id ) {
 		return $this->offsetGet( $id );
@@ -26,8 +30,8 @@ class Container extends \Pimple\Container {
 	/**
 	 * Set item in container
 	 *
-	 * @param string $id
-	 * @param mixed  $value
+	 * @param string $id Key for the item.
+	 * @param mixed  $value Value to be set.
 	 */
 	public function set( $id, $value ) {
 		$this->offsetSet( $id, $value );

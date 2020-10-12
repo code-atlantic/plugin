@@ -1,4 +1,11 @@
 <?php
+/**
+ * Hook & Filter management.
+ *
+ * @package     CodeAtlantic\Plugin
+ * @author      Code Atlantic
+ * @copyright   Copyright (c) 2020, Code Atlantic LLC
+ */
 
 namespace CodeAtlantic\Plugin;
 
@@ -16,7 +23,7 @@ class Hooks {
 	/**
 	 * Registers an object with the WordPress Plugin API.
 	 *
-	 * @param mixed $object
+	 * @param mixed $object Register action or filter.
 	 */
 	public function register( $object ) {
 		if ( $object instanceof Action_Hook_Subscriber ) {
@@ -30,9 +37,9 @@ class Hooks {
 	/**
 	 * Register an object with a specific action hook.
 	 *
-	 * @param Action_Hook_Subscriber $object
-	 * @param string                 $name
-	 * @param mixed                  $parameters
+	 * @param Action_Hook_Subscriber $object Action hook object.
+	 * @param string                 $name Name of the hook used.
+	 * @param mixed                  $parameters Additional arguments.
 	 */
 	private function register_action( Action_Hook_Subscriber $object, $name, $parameters ) {
 		if ( is_string( $parameters ) ) {
@@ -45,7 +52,7 @@ class Hooks {
 	/**
 	 * Regiters an object with all its action hooks.
 	 *
-	 * @param Action_Hook_Subscriber $object
+	 * @param Action_Hook_Subscriber $object Object to register.
 	 */
 	private function register_actions( Action_Hook_Subscriber $object ) {
 		foreach ( $object->get_actions() as $name => $parameters ) {
@@ -56,9 +63,9 @@ class Hooks {
 	/**
 	 * Register an object with a specific filter hook.
 	 *
-	 * @param Filter_Hook_Subscriber $object
-	 * @param string                 $name
-	 * @param mixed                  $parameters
+	 * @param Filter_Hook_Subscriber $object Filter hook object.
+	 * @param string                 $name Name of the filter used.
+	 * @param mixed                  $parameters Additional arguments.
 	 */
 	private function register_filter( Filter_Hook_Subscriber $object, $name, $parameters ) {
 		if ( is_string( $parameters ) ) {
@@ -71,7 +78,7 @@ class Hooks {
 	/**
 	 * Regiters an object with all its filter hooks.
 	 *
-	 * @param Filter_Hook_Subscriber $object
+	 * @param Filter_Hook_Subscriber $object Object to register.
 	 */
 	private function register_filters( Filter_Hook_Subscriber $object ) {
 		foreach ( $object->get_filters() as $name => $parameters ) {

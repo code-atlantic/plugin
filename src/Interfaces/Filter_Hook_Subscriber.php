@@ -1,7 +1,11 @@
 <?php
-/*******************************************************************************
- * Copyright (c) 2020, Code Atlantic LLC.
- ******************************************************************************/
+/**
+ * Interface for WordPress filters.
+ *
+ * @package     CodeAtlantic\Plugin
+ * @author      Code Atlantic
+ * @copyright   Copyright (c) 2020, Code Atlantic LLC
+ */
 
 namespace CodeAtlantic\Plugin\Interfaces;
 

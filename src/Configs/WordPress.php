@@ -1,7 +1,11 @@
 <?php
-/*******************************************************************************
- * Copyright (c) 2020, Code Atlantic LLC.
- ******************************************************************************/
+/**
+ * Container configuration presets for WordPress.
+ *
+ * @package     CodeAtlantic\Plugin\Configs
+ * @author      Code Atlantic
+ * @copyright   Copyright (c) 2020, Code Atlantic LLC
+ */
 
 namespace CodeAtlantic\Plugin\Configs;
 
@@ -22,7 +26,7 @@ class WordPress implements ServiceProviderInterface {
 	 * This method should only be used to configure services and parameters.
 	 * It should not get services.
 	 *
-	 * @param Container $container A container instance
+	 * @param Container $container A container instance.
 	 */
 	public function register( Container $container ) {
 		$container['wp.database'] = function ( Container $container ) {
