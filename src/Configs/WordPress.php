@@ -11,6 +11,7 @@ namespace CodeAtlantic\Plugin\Configs;
 
 use Pimple\Container;
 use Pimple\ServiceProviderInterface;
+use DownShift\WordPress\EventEmitter;
 use WP_Query;
 
 /**
@@ -37,6 +38,10 @@ class WordPress implements ServiceProviderInterface {
 
 		$container['wp.query'] = function ( Container $container ) {
 			return new WP_Query();
+		};
+
+		$container['hooks'] = function ( Container $container ) {
+			return new EventEmitter();
 		};
 
 		$container['wp.user'] = wp_get_current_user();

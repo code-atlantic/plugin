@@ -4,8 +4,53 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "51a987330c2591b5c84fab353bb6a6eb",
+    "content-hash": "0df4d270d0c21f97d8d372f0855e4765",
     "packages": [
+        {
+            "name": "downshiftorg/wp-event-emitter",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/downshiftorg/wp-event-emitter.git",
+                "reference": "c9e799d7464375d39d9bcd2894903d7c64c577de"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/downshiftorg/wp-event-emitter/zipball/c9e799d7464375d39d9bcd2894903d7c64c577de",
+                "reference": "c9e799d7464375d39d9bcd2894903d7c64c577de",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.6",
+                "symfony/var-dumper": "~2.6.0"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "DownShift\\WordPress\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Brian Scaturro",
+                    "email": "scaturrob@gmail.com"
+                }
+            ],
+            "description": "An object oriented event emitter for WordPress actions",
+            "support": {
+                "issues": "https://github.com/downshiftorg/wp-event-emitter/issues",
+                "source": "https://github.com/downshiftorg/wp-event-emitter/tree/6.0.0"
+            },
+            "time": "2018-01-15T17:42:40+00:00"
+        },
         {
             "name": "pimple/pimple",
             "version": "v3.3.0",
@@ -108,11 +153,15 @@
     ],
     "packages-dev": [],
     "aliases": [],
-    "minimum-stability": "stable",
-    "stability-flags": [],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "downshiftorg/wp-event-emitter": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "php": "^5.6 || ^7.0"
+    },
     "platform-dev": [],
-    "plugin-api-version": "1.1.0"
+    "plugin-api-version": "2.0.0"
 }
