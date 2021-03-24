@@ -4,7 +4,7 @@
  *
  * @package     CodeAtlantic\Plugin
  * @author      Code Atlantic
- * @copyright   Copyright (c) 2020, Code Atlantic LLC
+ * @copyright   Copyright (c) 2021, Code Atlantic LLC
  */
 
 namespace CodeAtlantic\Plugin;
