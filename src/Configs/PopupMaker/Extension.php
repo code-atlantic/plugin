@@ -27,7 +27,7 @@ class Extension implements ServiceProviderInterface {
 	 *
 	 * @param Container $container A container instance.
 	 */
-	public function register( Container $container ) {
+	public function register( $container ) {
 		// This should mimic the registration process in our PUM_Extension_Activator class.
 	}
 }

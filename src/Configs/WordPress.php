@@ -29,18 +29,18 @@ class WordPress implements ServiceProviderInterface {
 	 *
 	 * @param Container $container A container instance.
 	 */
-	public function register( Container $container ) {
-		$container['wp.database'] = function ( Container $container ) {
+	public function register(  $container ) {
+		$container['wp.database'] = function (  $container ) {
 			global $wpdb;
 
 			return $wpdb;
 		};
 
-		$container['wp.query'] = function ( Container $container ) {
+		$container['wp.query'] = function (  $container ) {
 			return new WP_Query();
 		};
 
-		$container['hooks'] = function ( Container $container ) {
+		$container['hooks'] = function (  $container ) {
 			return new EventEmitter();
 		};
 
